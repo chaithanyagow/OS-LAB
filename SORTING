@@ -1,0 +1,17 @@
+def sort_numbers(numbers):
+    sorted_numbers = []
+    
+    while numbers:
+        minimum = numbers[0] 
+        
+        for num in numbers:
+            if num < minimum:
+                minimum = num
+        
+        sorted_numbers.append(minimum)
+        numbers.remove(minimum)
+    
+    return sorted_numbers
+numbers = [9, 2, 5, 1, 10, 3]
+sorted_numbers = sort_numbers(numbers)
+print(sorted_numbers)
